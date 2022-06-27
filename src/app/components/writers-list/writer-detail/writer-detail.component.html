@@ -1,4 +1,4 @@
-<button class="btn" [routerLink]="['/writers']">Volver</button>
+<button class="btn" [routerLink]="['../../']">Volver</button>
 
 <div class="container">
 	<img [src]="writer?.imagen" [alt]="writer?.nombre">
@@ -9,6 +9,4 @@
 </div>
 
 <h3>Sus libros</h3>
-<div class="container">
-	<router-outlet></router-outlet>
-</div>
+<router-outlet></router-outlet>

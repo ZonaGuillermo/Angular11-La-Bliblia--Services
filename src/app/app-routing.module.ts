@@ -16,7 +16,7 @@ const routes: Routes = [
 				{ path: 'book/:bookId', component: BookDetailComponent }
     	]
   },
-  { path: '**', redirectTo: '/writers' }
+  // { path: '**', redirectTo: '/writers' }
 ];
 
 @NgModule({

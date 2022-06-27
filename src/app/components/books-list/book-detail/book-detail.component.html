@@ -1,1 +1,9 @@
-<p>book-detail works!</p>
+<button class="btn" [routerLink]="['../../books']">Volver</button>
+
+<div class="container">
+	<img [src]="book?.imagen" [alt]="book?.titulo">
+	<div class="book-data">
+		<h2>{{ book?.titulo }}</h2>
+		<p>{{ book?.publicado }}</p>
+	</div>
+</div>
