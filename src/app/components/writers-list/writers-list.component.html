@@ -1,0 +1,19 @@
+<h1>LISTA DE ESCRITORES</h1>
+
+<select (change)="onClick($event)">
+	<option value="" selected>Filtra por país</option>
+	<option value="españa">España</option>
+	<option value="reino unido">Reino Unido</option>
+	<option value="chile">Chile</option>
+	<option value="canadá">Canadá</option>
+	<option value="francia">Francia</option>
+</select>
+
+<div class="container">
+	<h3 *ngIf="writersList.length === 0">No hay escritores de ese país.</h3>
+	<div class="card" *ngFor="let writer of writersList" [routerLink]="['/writer', writer.id]">
+		<h5>{{writer.nombre}} {{writer.apellidos}}</h5>
+		<img [src]="writer.imagen" [alt]="writer.nombre">
+		<p>{{writer.pais}}</p>
+	</div>
+</div>

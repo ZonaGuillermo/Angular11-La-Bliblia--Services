@@ -1,0 +1,14 @@
+<button class="btn" [routerLink]="['/writers']">Volver</button>
+
+<div class="container">
+	<img [src]="writer?.imagen" [alt]="writer?.nombre">
+	<div class="writer-data">
+		<h2>{{ writer?.nombre }} {{ writer?.apellidos }}</h2>
+		<p>{{ writer?.pais }}</p>
+	</div>
+</div>
+
+<h3>Sus libros</h3>
+<div class="container">
+	<router-outlet></router-outlet>
+</div>
